@@ -4,12 +4,16 @@
 }
 
 body {
-    display: flex;
     flex-direction: column;
-    line-height: 1.3;
+    line-height: 2;
   }
-  
-  header {
+
+p {
+    margin: 1%;
+    font-size: 120%;
+  }
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,11 +22,9 @@ body {
     color: #fff;
   }
   
-h1 {
+h1, h2 {
     font-family: Arial, Helvetica, sans-serif;
     margin: 1%;
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
 }
 
@@ -36,68 +38,78 @@ nav ul {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
-    min-width: 400px;
+    min-width: 500px;
     list-style-type: none;
     color: #fff;
   }
-  
-  nav a {
+
+nav a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
     font-size: 32px;
   }
   
-  .projects {
-  flex: 0 0 300px;;
-  background-color: #fff;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  }
-  
-  .maincard {
-    border-style: solid;
-    border-width: 1px;
-    padding: 10px;
-    flex: 0 0 300px;
-    margin: 20px;
-    
-  }
-
-  .card {
-    border-style: solid;
-    border-width: 1px;
-    padding: 10px;
-    flex: 0 0 300px;
-    margin: 20px;
-  }
-
-  .headshot{
-    border-style: solid;
-    border-width: 1.5px;
-    padding: 5px;
-    flex: 0 0 300px;
-  }
-
-/*this wasn't the ideal element for making theme cards "responsive"
-  .responsive {
+footer {
     width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-*/
-
-  footer {
-    width: 100%;
-    padding: 20px;
+    padding: 1%;
     text-align: left;
     background: #000000;
     margin-top: auto;
   }
+
+footer a:visited {
+    color: white
+  }
   
+.maincard {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    flex: 1 0 300px;
+    margin: 20px;
+    
+  }
+
+.card, .headshot {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin: 20px;
+  }
   
-  
-  
+  /* Container needed to position the overlay. Adjust the width as needed */
+  /*Based on the examples of container overlays from https://www.w3schools.com/howto/howto_css_image_overlay_title.asp */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
