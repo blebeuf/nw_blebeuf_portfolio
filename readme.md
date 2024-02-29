@@ -10,7 +10,7 @@ Each image shares a portion of my skills within each realm, while the site in it
 
 Provide instructions and examples for use. Include screenshots as needed.
 
-![Screenshot of the finished website portfolio project](./assets/images/screenshot.png)
+![Screenshot of the finished website portfolio project](./assets/images/Screenshot.png)
 
 ## Credits
 
